@@ -29,8 +29,7 @@ module CLA(a, b, s, cin, cout);
     output cout;
 
     wire G0, G1, G2, G3, P0, P1, P2, P3;
-    wire C1, C2, C3;
-    wire cout;
+    wire C1, C2, C3, cout;
 
     xor XOR_P0(P0, a[0], b[0]);
     xor XOR_P1(P1, a[1], b[1]);
