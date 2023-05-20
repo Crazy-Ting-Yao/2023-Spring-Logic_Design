@@ -74,5 +74,3 @@ module Multiplier(out, in1, in2);
     CLA CLA1(T1, f, out[3:0], carry0, carry1);
     CLA CLA2(T2, h, out[7:4], carry1, carry2);
 endmodule
-
-
