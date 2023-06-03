@@ -1,4 +1,5 @@
-// This version has a delay before display the values.
+// This version doesn't have any delay before display the values.
+// If you implement yor lab in TA's way, you should use this one.
 
 `include "lab3.v"
 
@@ -17,9 +18,8 @@ module lab3_tb1;
             data = data_pattern[i];
             reset = reset_pattern[i];
             #delay clk = ~clk;
-            #1;
             $display("  %2d  |   %b   |   %b   |  %b", $time/10, reset, data, flag);
-            #4 clk = ~clk;
+            #delay clk = ~clk;
         end
         $finish;
     end
