@@ -15,8 +15,10 @@ module PAT(clk, reset, data, flag);
     end
 
     always@(*)begin
-        if(reset)
+        if(reset) begin
             next_state = 3'b000;
+            flag = 1'b0;
+        end
         else begin
         case(state)
             3'b000:begin
